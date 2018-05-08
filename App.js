@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 import createSagaMiddleware from "redux-saga";
 import { getProductsWatcher } from "./sagas";
 import Products from "./Products";
+import TimeTicker from "./TimeTicker";
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -18,7 +19,7 @@ export default class App extends React.Component {
     return (
       <Provider store={store}>
         <View style={styles.container}>
-          <Products />
+          <TimeTicker />
         </View>
       </Provider>
     );
